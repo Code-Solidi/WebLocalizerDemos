@@ -1,0 +1,18 @@
+﻿@using System.Globalization
+
+<select @onchange="OnSelected">
+    @{
+        foreach (var culture in this.Cultures)
+        {
+            if (culture.Key == CultureInfo.CurrentCulture.Name)
+            {
+                <option value="@culture.Key" selected>@culture.Value</option>
+            }
+            else
+            {
+                <option value="@culture.Key">@culture.Value</option>
+            }
+        }
+    }
+</select>
+

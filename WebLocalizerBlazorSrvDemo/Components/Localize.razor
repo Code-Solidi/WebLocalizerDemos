@@ -1,0 +1,58 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+@inherits LocalizeBlazor
+
+@implements IObserver
+@implements IDisposable
+
+@this.ChildContent
+
+@code {
+    [Inject]
+    private INotifierService NotifierService { get; set; }
+
+    [Inject]
+    protected IJSRuntime jsRuntime { get; set; }
+
+    private IJSObjectReference jsModule;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        this.NotifierService?.Attach(this);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            this.jsModule ??= await this.jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/WebLocalizer.Blazor/cookie.js");
+
+            var name = CookieRequestCultureProvider.DefaultCookieName;
+            var value = await this.jsModule.InvokeAsync<string>("readCookie", name);
+            var result = CookieRequestCultureProvider.ParseCookieValue(value);
+            if (result != default)
+            {
+                var culture = result.Cultures[0].Value;
+                CultureInfo.CurrentCulture = new CultureInfo(culture);
+                CultureInfo.CurrentUICulture = new CultureInfo(culture);
+
+                await base.ProcessAsync(culture);
+                this.StateHasChanged();
+            }
+        }
+    }
+
+    public void Dispose()
+    {
+        this.NotifierService?.Detach(this);
+    }
+
+    public async Task UpdateAsync(INotifierService subject, params object[] args)
+    {
+        var culture = (string)args[0];
+        await base.ProcessAsync(culture);
+        this.StateHasChanged();
+    }
+}

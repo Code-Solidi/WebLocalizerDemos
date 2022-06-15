@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLocalizerDemo", "WebLocalizerDemo\WebLocalizerDemo.csproj", "{80604764-29CB-4105-9A32-79C179D203D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLocalizerDemoDynamic", "WebLocalizerDemoDynamic\WebLocalizerDemoDynamic.csproj", "{59632830-76EC-4EDF-8C0F-2F3E3B116FCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLocalizerDemoGreekDefault", "WebLocalizerDemoGreekDefault\WebLocalizerDemoGreekDefault.csproj", "{6F65BC29-3E8C-4B59-9A34-7E9637E18903}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLocalizerRazorPagesDemo", "WebLocalizerRazorPagesDemo\WebLocalizerRazorPagesDemo.csproj", "{48BEAD0E-9EB1-4D89-BC3B-8098A6F5691C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLocalizerBlazorSrvDemo", "WebLocalizerBlazorSrvDemo\WebLocalizerBlazorSrvDemo.csproj", "{BBA891EF-82F9-4C53-B304-C4F02076889A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80604764-29CB-4105-9A32-79C179D203D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80604764-29CB-4105-9A32-79C179D203D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80604764-29CB-4105-9A32-79C179D203D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80604764-29CB-4105-9A32-79C179D203D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59632830-76EC-4EDF-8C0F-2F3E3B116FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59632830-76EC-4EDF-8C0F-2F3E3B116FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59632830-76EC-4EDF-8C0F-2F3E3B116FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59632830-76EC-4EDF-8C0F-2F3E3B116FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F65BC29-3E8C-4B59-9A34-7E9637E18903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F65BC29-3E8C-4B59-9A34-7E9637E18903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F65BC29-3E8C-4B59-9A34-7E9637E18903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F65BC29-3E8C-4B59-9A34-7E9637E18903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BEAD0E-9EB1-4D89-BC3B-8098A6F5691C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BEAD0E-9EB1-4D89-BC3B-8098A6F5691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BEAD0E-9EB1-4D89-BC3B-8098A6F5691C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BEAD0E-9EB1-4D89-BC3B-8098A6F5691C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA891EF-82F9-4C53-B304-C4F02076889A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA891EF-82F9-4C53-B304-C4F02076889A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA891EF-82F9-4C53-B304-C4F02076889A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA891EF-82F9-4C53-B304-C4F02076889A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {236374DA-62BB-4DB8-8604-A068F7586506}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+﻿@model MovieListModel
+
+@{
+    ViewData["Title"] = "Home Page";
+    var template = this.Model.Movies.FirstOrDefault();
+}
+
+<div class="text-center">
+    <h1 class="display-4" localize>Welcome</h1>
+    <p>A demo of <strong>dynamic</strong> data, an excerpt from the <a href="https://dev.mysql.com/doc/sakila/en/" target="_blank">Sakila DB</a> "film" table.</p>
+</div>
+
+<p>
+    <strong>NOTE:</strong> The client code has the responsibility to store changed data to persistent storage. In this example it is achieved by inheriting
+    from <code>JsonStringLocalizerCacheFactory</code> (see <code>LocalizedCacheFactory</code>) and overriding the <code>Save()</code>
+    method in <code>MovieJsonPropertyLocalizer</code> which in turn is derived from the absrtact class <code>JsonPropertyLocalizer</code>.
+</p>
+<p>Take a look at the sample code and if you have questions post them to the WebLocalizer <a href="https://www.weblocalizer.eu/home/contactus" target="_blank">Contact us</a> page.</p>
+<p>Thank you and enjoy!</p>
+
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="/home/index/0">&#171;</a></li>
+        <li class="page-item"><a class="page-link" href="/home/index/@this.Model.Pager.Prev">&#8249;</a></li>
+        @for (var index = this.Model.Pager.Min; index <= this.Model.Pager.Max; index++)
+        {
+            <li class="page-item">
+                <a class="page-link" href="/home/index/@index">
+                    @if (index == this.Model.Pager.Current)
+                    {
+                        <strong>@index</strong>
+                    }
+                    else
+                    {
+                        @index
+                    }
+                </a>
+            </li>
+        }
+
+        <li class="page-item"><a class="page-link" href="/home/index/@this.Model.Pager.Next">&#8250;</a></li>
+        <li class="page-item"><a class="page-link" href="/home/index/9999">&#187;</a></li>
+    </ul>
+</nav>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:0;padding:0">
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => template.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => template.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => template.ReleaseYear)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in this.Model.Movies)
+        {
+            <tr>
+                <td style="width:0;padding:0">
+                    @Html.HiddenFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td localize instance=@item property="@nameof(MovieModel.Description)" id="@item.Id">
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td class="float-right">
+                    @Html.DisplayFor(modelItem => item.ReleaseYear)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
