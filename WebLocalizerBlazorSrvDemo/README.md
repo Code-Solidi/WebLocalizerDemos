@@ -2,7 +2,7 @@
 
 **WebLocalizer** demo project. Download, build and run after creating an account in www.weblocalizer.eu. 
 
-This demo demonstrates how [Server-side (SS) Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) are localized. 
+This demo demonstrates how server-side (SS) [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) are localized. 
 
 Replace the texts within '<' and '>' in appsettings.json:
 
