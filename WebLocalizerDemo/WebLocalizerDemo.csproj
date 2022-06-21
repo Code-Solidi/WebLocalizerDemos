@@ -10,6 +10,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.11" />
 		<PackageReference Include="WebLocalizer" Version="1.0.0" />
+		<!--<PackageReference Include="WebLocalizer" Version="1.0.0" />-->
 	</ItemGroup>
 
 </Project>
