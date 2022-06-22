@@ -365,5 +365,4 @@ FodyWeavers.xsd
 # appsettings.json since it contains user info
 **/appsettings.json
 /appsettings.zip
-/LocalizationCache/WebLocalizerDemo.cache.zip
-/LocalizationCache/WebLocalizerDemo.cache.json
+/wwwroot/WebLocalizer.Cache/**
