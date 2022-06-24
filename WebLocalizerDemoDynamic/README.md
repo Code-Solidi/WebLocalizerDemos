@@ -15,6 +15,8 @@ Replace the demo credentials with "real" ones in appsettings.json:
  
 **NB:** Despite just a demo project read the following <a target="_blank" href="https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-6.0&tabs=windows">article</a> if you want to use *ASP.NET Core Secrets* to store your credentials. 
 
+**WARNING:** This account was created to make it easier get familiar with WebLocalizer and is _not intended_ for other purposes. This will lead to misbehavior when trying to use with non-demo projects.
+
 There are some <a target="_blank" href="https://www.weblocalizer.eu#videos">videos</a> you may wish to watch.
 
 Enjoy!
